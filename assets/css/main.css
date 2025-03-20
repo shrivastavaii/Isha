@@ -2435,3 +2435,81 @@ input, select, textarea {
 		.tech-item:hover {
 			transform: scale(1.1);
 		}
+
+
+
+		/* Flexbox Layout for About Me & Tech Stack */
+		/* Centering Container */
+.about-tech-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center; /* Ensures text inside boxes is centered */
+}
+
+/* About Me & Tech Stack Box */
+.about-box, .tech-box {
+    flex: 1;
+    min-width: 350px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+	color: #ffffff;
+}
+
+/* Center Text Inside Boxes */
+.about-box h2, .about-box p,
+.tech-box h2, .tech-grid {
+    text-align: center;
+}
+
+/* Tech Stack Grid */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers icons horizontally */
+    gap: 20px;
+    padding: 10px;
+}
+
+/* Tech Stack Icons */
+.tech-item {
+    text-align: center;
+    width: 100px;
+}
+
+.tech-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.tech-item span {
+    display: block;
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Ensure Section is Centered */
+.main.style2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Makes everything flow vertically */
+    height: 100vh; /* Makes it fill the screen */
+}
+
+/* Responsive - Stack Sections Vertically on Smaller Screens */
+@media screen and (max-width: 768px) {
+    .about-tech-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
